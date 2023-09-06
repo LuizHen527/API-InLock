@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>api_inlock</name>
+    </assembly>
+    <members>
+        <member name="M:api_inlock.Controllers.EstudioController.Post(api_inlock.Domains.EstudioDomain)">
+            <summary>
+            Endpoint que aciona metodo de cadastrar um novo estudio
+            </summary>
+            <param name="estudio">Estudio que sera cadastrado</param>
+            <returns>Retorna statusCode 200</returns>
+        </member>
+        <member name="M:api_inlock.Controllers.EstudioController.Get">
+            <summary>
+            Endpoint que aciona metodo para listar todos os estudios
+            </summary>
+            <returns>Retorna uma lista com os estudios</returns>
+        </member>
+        <member name="M:api_inlock.Controllers.EstudioController.Delete(System.Int32)">
+            <summary>
+            Aciona um metodo que deleta um estudio por uma id
+            </summary>
+            <param name="id">Id do estudio que sera deletado</param>
+            <returns>Retorna um StatusCode 204</returns>
+        </member>
+        <member name="M:api_inlock.Interfaces.IEstudioRepository.Cadastrar(api_inlock.Domains.EstudioDomain)">
+            <summary>
+            Cadastra um estudio
+            </summary>
+            <param name="estudio">Estudio que sera cadastrado</param>
+        </member>
+        <member name="M:api_inlock.Interfaces.IEstudioRepository.ListarTodos">
+            <summary>
+            Lista todos os estudios existentes no banco de dados
+            </summary>
+            <returns>Retorna a lista de estudios</returns>
+        </member>
+        <member name="M:api_inlock.Interfaces.IEstudioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um estudio
+            </summary>
+            <param name="estudio">Estudio que sera deletado</param>
+        </member>
+        <member name="M:api_inlock.Interfaces.IJogoRepository.Cadastrar(api_inlock.Domains.JogoDomain)">
+            <summary>
+            Cadastra um novo jogo
+            </summary>
+            <param name="jogo">Novo jogo que sera cadastrado</param>
+        </member>
+        <member name="M:api_inlock.Interfaces.IJogoRepository.ListarTodos">
+            <summary>
+            Lista todos os jogos existentes
+            </summary>
+            <returns>Retorna uma lista com todos os jogos</returns>
+        </member>
+        <member name="M:api_inlock.Interfaces.IJogoRepository.Deletar(api_inlock.Domains.JogoDomain)">
+            <summary>
+            Deleta um jogo
+            </summary>
+            <param name="jogo">Jogo que sera deletado</param>
+        </member>
+        <member name="M:api_inlock.Repositories.EstudioRepository.Cadastrar(api_inlock.Domains.EstudioDomain)">
+            <summary>
+            Cadastra um estudio
+            </summary>
+            <param name="estudio">Estudio que sera cadastrado</param>
+        </member>
+        <member name="M:api_inlock.Repositories.EstudioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um estudio
+            </summary>
+            <param name="id">Estudio que sera deletado</param>
+        </member>
+        <member name="M:api_inlock.Repositories.EstudioRepository.ListarTodos">
+            <summary>
+            Lista todos os estudios existentes no banco de dados
+            </summary>
+            <returns>Retorna a lista de estudios</returns>
+        </member>
+    </members>
+</doc>
