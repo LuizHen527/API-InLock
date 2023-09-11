@@ -6,7 +6,9 @@ namespace api_inlock.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
-        private string StringConexao = "Data Source = NOTE22-S15; Initial Catalog = Filmes; User Id = sa; Pwd = Senai@134";
+        //private string StringConexao = "Data Source = NOTE22-S15; Initial Catalog = inlock_games; User Id = sa; Pwd = Senai@134";
+
+        private string StringConexao = "Data Source = DESKTOP-C6SOG6K\\SQLEXPRESS; Initial Catalog = inlock_games; User Id = sa; Pwd = pPtA3002";
         public UsuarioDomain Login(string Email, string Senha)
         {
             using(SqlConnection con = new SqlConnection(StringConexao))
@@ -28,9 +30,9 @@ namespace api_inlock.Repositories
 
                     if (rdr.Read())
                     {
-                        UsuarioDomain usuario = new UsuarioDomain()
+                        UsuarioDomain usuario = new UsuarioDomain
                         {
-                            IdUsuario = Convert.ToInt32(rdr[0]),
+                            IdUsuario = Convert.ToInt32(rdr["IdUsuario"]),
                             Email = rdr["Email"].ToString(),
                             Senha = rdr["Senha"].ToString(),
                             Tipo = rdr["Titulo"].ToString()

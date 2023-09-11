@@ -1,8 +1,10 @@
 ﻿using api_inlock.Domains;
 using api_inlock.Interfaces;
 using api_inlock.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace api_inlock.Controllers
@@ -26,6 +28,7 @@ namespace api_inlock.Controllers
         /// <returns>Retorna statusCode 200</returns>
 
         [HttpPost]
+        [Authorize(Roles = "Administrador")]
 
         public IActionResult Post(EstudioDomain estudio)
         {
@@ -48,6 +51,7 @@ namespace api_inlock.Controllers
         /// <returns>Retorna uma lista com os estudios</returns>
 
         [HttpGet]
+        [Authorize(Roles = "Administrador,Comum")]
 
         public IActionResult Get()
         {
@@ -71,6 +75,7 @@ namespace api_inlock.Controllers
         /// <returns>Retorna um StatusCode 204</returns>
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrador")]
 
         public IActionResult Delete(int id)
         {
@@ -78,7 +83,7 @@ namespace api_inlock.Controllers
             {
                 _estudioRepository.Deletar(id);
 
-                return StatusCode(204);
+                return StatusCode(200, "Deletado");
             }
             catch (Exception erro)
             {

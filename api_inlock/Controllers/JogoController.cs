@@ -1,8 +1,10 @@
 ﻿using api_inlock.Domains;
 using api_inlock.Interfaces;
 using api_inlock.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace api_inlock.Controllers
 {
@@ -19,6 +21,7 @@ namespace api_inlock.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Administrador")]
 
         public IActionResult Post(JogoDomain jogo)
         {
@@ -36,6 +39,7 @@ namespace api_inlock.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrador")]
 
         public IActionResult Delete(int id)
         {
@@ -43,7 +47,7 @@ namespace api_inlock.Controllers
             {
                 _jogoRepository.Deletar(id);
 
-                return StatusCode(204);
+                return StatusCode(200, "Deletado");
             }
             catch (Exception erro)
             {
@@ -53,6 +57,7 @@ namespace api_inlock.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Administrador,Comum")]
 
         public IActionResult Get()
         {
