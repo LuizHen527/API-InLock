@@ -54,7 +54,7 @@
             </summary>
             <returns>Retorna uma lista com todos os jogos</returns>
         </member>
-        <member name="M:api_inlock.Interfaces.IJogoRepository.Deletar(api_inlock.Domains.JogoDomain)">
+        <member name="M:api_inlock.Interfaces.IJogoRepository.Deletar(System.Int32)">
             <summary>
             Deleta um jogo
             </summary>

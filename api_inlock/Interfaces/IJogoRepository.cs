@@ -24,6 +24,6 @@ namespace api_inlock.Interfaces
         /// </summary>
         /// <param name="jogo">Jogo que sera deletado</param>
 
-        void Deletar(JogoDomain jogo);
+        void Deletar(int id);
     }
 }

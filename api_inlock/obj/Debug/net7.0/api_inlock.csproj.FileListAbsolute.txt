@@ -38,3 +38,11 @@ C:\Users\38606125814\Desktop\api_inlock\api_inlock\obj\Debug\net7.0\api_inlock.x
 C:\Users\38606125814\Desktop\api_inlock\api_inlock\obj\Debug\net7.0\api_inlock.pdb
 C:\Users\38606125814\Desktop\api_inlock\api_inlock\obj\Debug\net7.0\api_inlock.genruntimeconfig.cache
 C:\Users\38606125814\Desktop\api_inlock\api_inlock\obj\Debug\net7.0\ref\api_inlock.dll
+C:\Users\38606125814\Desktop\api_inlock\api_inlock\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\38606125814\Desktop\api_inlock\api_inlock\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\38606125814\Desktop\api_inlock\api_inlock\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\38606125814\Desktop\api_inlock\api_inlock\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\38606125814\Desktop\api_inlock\api_inlock\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\38606125814\Desktop\api_inlock\api_inlock\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\38606125814\Desktop\api_inlock\api_inlock\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\38606125814\Desktop\api_inlock\api_inlock\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
