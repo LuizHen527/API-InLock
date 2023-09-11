@@ -6,9 +6,20 @@ namespace api_inlock.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
+        //Conexão no SENAI
         //private string StringConexao = "Data Source = NOTE22-S15; Initial Catalog = inlock_games; User Id = sa; Pwd = Senai@134";
 
+        //Conexão em casa
         private string StringConexao = "Data Source = DESKTOP-C6SOG6K\\SQLEXPRESS; Initial Catalog = inlock_games; User Id = sa; Pwd = pPtA3002";
+
+
+        /// <summary>
+        /// Metodo que compara a senha e email com os mesmos do banco de dados
+        /// </summary>
+        /// <param name="Email">Email que será comparado</param>
+        /// <param name="Senha">Senha que será comparada</param>
+        /// <returns></returns>
+
         public UsuarioDomain Login(string Email, string Senha)
         {
             using(SqlConnection con = new SqlConnection(StringConexao))

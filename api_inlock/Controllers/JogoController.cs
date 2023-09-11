@@ -20,6 +20,12 @@ namespace api_inlock.Controllers
             _jogoRepository = new JogoRepository();
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo de cadastrar um jogo
+        /// </summary>
+        /// <param name="jogo">Jogo que será cadastrado</param>
+        /// <returns>Retorna status code 201</returns>
+
         [HttpPost]
         [Authorize(Roles = "Administrador")]
 
@@ -38,6 +44,12 @@ namespace api_inlock.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo de deletar um jogo
+        /// </summary>
+        /// <param name="id">Id do jogo que será deletado</param>
+        /// <returns>Retorna status code 200 com uma mensagem</returns>
+
         [HttpDelete("{id}")]
         [Authorize(Roles = "Administrador")]
 
@@ -55,6 +67,11 @@ namespace api_inlock.Controllers
                 return BadRequest(erro.Message);
             }
         }
+
+        /// <summary>
+        /// Endpoint que aciona o metodo de listar todos os jogos
+        /// </summary>
+        /// <returns>Retorna uma lista com todos os jogos</returns>
 
         [HttpGet]
         [Authorize(Roles = "Administrador,Comum")]

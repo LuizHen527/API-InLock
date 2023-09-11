@@ -21,6 +21,12 @@ namespace api_inlock.Controllers
             _usuarioRepository = new UsuarioRepository();
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo de login
+        /// </summary>
+        /// <param name="usuario">Usuario que sera autenticado</param>
+        /// <returns>Retorna um token</returns>
+
         [HttpPost]
 
         public IActionResult Login(UsuarioDomain usuario)

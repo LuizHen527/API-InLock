@@ -6,9 +6,17 @@ namespace api_inlock.Repositories
 {
     public class JogoRepository : IJogoRepository
     {
+        //Conexão no SENAI
         //private string StringConexao = "Data Source = NOTE22-S15; Initial Catalog = inlock_games; User Id = sa; Pwd = Senai@134";
 
+        //Conexão em casa
         private string StringConexao = "Data Source = DESKTOP-C6SOG6K\\SQLEXPRESS; Initial Catalog = inlock_games; User Id = sa; Pwd = pPtA3002";
+
+        /// <summary>
+        /// Metodo que cadastra um novo jogo
+        /// </summary>
+        /// <param name="jogo">Jogo que sera cadastrado</param>
+
         public void Cadastrar(JogoDomain jogo)
         {
             using(SqlConnection con = new SqlConnection(StringConexao))
@@ -30,6 +38,11 @@ namespace api_inlock.Repositories
             }
         }
 
+        /// <summary>
+        /// Metodo que deleta um jogo existente
+        /// </summary>
+        /// <param name="id">Id do jogo que será deletado</param>
+
         public void Deletar(int id)
         {
             using (SqlConnection con = new SqlConnection(StringConexao))
@@ -46,6 +59,11 @@ namespace api_inlock.Repositories
                 }
             }
         }
+
+        /// <summary>
+        /// Metodo que lista todos os jogos 
+        /// </summary>
+        /// <returns>Retorna uma lista com todos os jogos</returns>
 
         public List<JogoDomain> ListarTodos()
         {
