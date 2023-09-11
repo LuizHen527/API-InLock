@@ -24,6 +24,33 @@
             <param name="id">Id do estudio que sera deletado</param>
             <returns>Retorna um StatusCode 204</returns>
         </member>
+        <member name="M:api_inlock.Controllers.JogoController.Post(api_inlock.Domains.JogoDomain)">
+            <summary>
+            Endpoint que aciona o metodo de cadastrar um jogo
+            </summary>
+            <param name="jogo">Jogo que será cadastrado</param>
+            <returns>Retorna status code 201</returns>
+        </member>
+        <member name="M:api_inlock.Controllers.JogoController.Delete(System.Int32)">
+            <summary>
+            Endpoint que aciona o metodo de deletar um jogo
+            </summary>
+            <param name="id">Id do jogo que será deletado</param>
+            <returns>Retorna status code 200 com uma mensagem</returns>
+        </member>
+        <member name="M:api_inlock.Controllers.JogoController.Get">
+            <summary>
+            Endpoint que aciona o metodo de listar todos os jogos
+            </summary>
+            <returns>Retorna uma lista com todos os jogos</returns>
+        </member>
+        <member name="M:api_inlock.Controllers.UsuarioController.Login(api_inlock.Domains.UsuarioDomain)">
+            <summary>
+            Endpoint que aciona o metodo de login
+            </summary>
+            <param name="usuario">Usuario que sera autenticado</param>
+            <returns>Retorna um token</returns>
+        </member>
         <member name="M:api_inlock.Interfaces.IEstudioRepository.Cadastrar(api_inlock.Domains.EstudioDomain)">
             <summary>
             Cadastra um estudio
@@ -77,6 +104,32 @@
             Lista todos os estudios existentes no banco de dados
             </summary>
             <returns>Retorna a lista de estudios</returns>
+        </member>
+        <member name="M:api_inlock.Repositories.JogoRepository.Cadastrar(api_inlock.Domains.JogoDomain)">
+            <summary>
+            Metodo que cadastra um novo jogo
+            </summary>
+            <param name="jogo">Jogo que sera cadastrado</param>
+        </member>
+        <member name="M:api_inlock.Repositories.JogoRepository.Deletar(System.Int32)">
+            <summary>
+            Metodo que deleta um jogo existente
+            </summary>
+            <param name="id">Id do jogo que será deletado</param>
+        </member>
+        <member name="M:api_inlock.Repositories.JogoRepository.ListarTodos">
+            <summary>
+            Metodo que lista todos os jogos 
+            </summary>
+            <returns>Retorna uma lista com todos os jogos</returns>
+        </member>
+        <member name="M:api_inlock.Repositories.UsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Metodo que compara a senha e email com os mesmos do banco de dados
+            </summary>
+            <param name="Email">Email que será comparado</param>
+            <param name="Senha">Senha que será comparada</param>
+            <returns></returns>
         </member>
     </members>
 </doc>
